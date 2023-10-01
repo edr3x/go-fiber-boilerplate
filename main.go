@@ -11,7 +11,6 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/limiter"
 	"github.com/gofiber/fiber/v2/middleware/recover"
 
-	"github.com/edr3x/fiber-starter/config"
 	router "github.com/edr3x/fiber-starter/modules"
 	"github.com/edr3x/fiber-starter/utils"
 )
@@ -20,10 +19,6 @@ type FailureResponse struct {
 	Success bool   `json:"success"`
 	Message string `json:"message"`
 	Path    string `json:"url_path"`
-}
-
-func init() {
-	config.LoadEnv()
 }
 
 func main() {
